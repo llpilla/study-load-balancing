@@ -2,7 +2,7 @@
 
 import random                    # for random numbers
 import statistics                # for metrics
-import matplotlib.pyplot as plt  # for plotting
+# import matplotlib.pyplot as plt  # for plotting
 
 
 def generate_uniform_loads(
@@ -105,45 +105,45 @@ def evaluate_mapping(
     return resource_loads
 
 
-def plot_mapping(
-        mapping,
-        task_loads,
-        num_resources,
-        filename=None):
-    """Creates a bar plot representing the mapping.
-
-    Parameters
-    ----------
-    mapping : list of int
-        Mapping of tasks to resources
-    task_loads : list of int or float
-        Load of the tasks
-    num_resources : int
-        Number of resources
-    filename : string [default=None]
-        Name of the file to store the plot
-
-    Notes
-    -----
-    The bar plot represents each resource in the horizontal axis and
-    its load in the vertical axis.
-    """
-    # Compute the resource loads
-    resource_loads = evaluate_mapping(
-            mapping,
-            task_loads,
-            num_resources,
-            False)
-
-    # Plots
-    plt.bar(range(num_resources), resource_loads)
-    plt.ylabel('Load (a.u.)')
-    plt.xlabel('Resources')
-    plt.title('Resource loads')
-
-    # Saves the plot in a file if a filename is given
-    if filename is not None:
-        plt.savefig(filename, bbox_inches='tight')
-
-    # Shows plot
-    plt.show()
+#def plot_mapping(
+#        mapping,
+#        task_loads,
+#        num_resources,
+#        filename=None):
+#    """Creates a bar plot representing the mapping.
+#
+#    Parameters
+#    ----------
+#    mapping : list of int
+#        Mapping of tasks to resources
+#    task_loads : list of int or float
+#        Load of the tasks
+#    num_resources : int
+#        Number of resources
+#    filename : string [default=None]
+#        Name of the file to store the plot
+#
+#    Notes
+#    -----
+#    The bar plot represents each resource in the horizontal axis and
+#    its load in the vertical axis.
+#    """
+#    # Compute the resource loads
+#    resource_loads = evaluate_mapping(
+#            mapping,
+#            task_loads,
+#            num_resources,
+#            False)
+#
+#    # Plots
+#    plt.bar(range(num_resources), resource_loads)
+#    plt.ylabel('Load (a.u.)')
+#    plt.xlabel('Resources')
+#    plt.title('Resource loads')
+#
+#    # Saves the plot in a file if a filename is given
+#    if filename is not None:
+#        plt.savefig(filename, bbox_inches='tight')
+#
+#    # Shows plot
+#    plt.show()

@@ -36,4 +36,4 @@ mapping = schedulers.list_scheduler(task_loads, num_resources)
 # Presents an analysis of the results
 support.evaluate_mapping(mapping, task_loads, num_resources)
 # Plots the resulting mapping and saves it to a file
-support.plot_mapping(mapping, task_loads, num_resources, 'example.png')
+#support.plot_mapping(mapping, task_loads, num_resources, 'example.png')
