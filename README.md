@@ -39,20 +39,24 @@ $ ./test_other_schedulers.py
 
 **Basic steps**
 
-1. Run `python3 complete_example.py` and try to understand its results. Check how to write code to use this simple load balancing simulator.
+0. Run `python3 complete_example.py` and try to understand its results. Check how to write code to use this simple load balancing simulator.
 
-2. Focus on the list scheduling algorithm (*list\_scheduler*). Try to create an adversary scenario that leads to a schedule that is (*2 - 1/m*) from the optimal for *m=2* and *m=3* resources.
+1. Run experiments with the available algorithms for small and large numbers of tasks and resources and compare their performance.
 
-3. Write the Largest Processing Time (LPT) list scheduling algorithm (complete function *lpt* in [the schedulers file](simulator/schedulers.py)). Check if it passes the test in [the unitary tests' file](unitary_tests/test_other_schedulers.py). Compare how LPT performs for the adversary case of the basic list scheduler.
+2. Focus on the list scheduling algorithm (*list\_scheduler*). Try to create an adversary (i.e., worst-case) scenario that leads to a schedule that is (*2 - 1/m*) from the optimal for *m=2* and *m=3* resources. For instance, if the optimal schedule on two resources has a makespan equal to 10, then the worst-case schedule by the list scheduling algorithm should result in a makespan equal to *10x(2-1/2)=15*. Experiment with small numbers of tasks and small loads for a better result.
 
-4. Run experiments the basic list scheduler and the LPT policy with tens or hundreds of tasks and resources. 
+3. Write the Largest Processing Time (LPT) list scheduling algorithm (complete function *lpt* in [the schedulers file](simulator/schedulers.py)). Check if it passes the test in [the unitary tests' file](unitary_tests/test_other_schedulers.py). Compare how LPT performs for the adversary case of the basic list scheduler from step 2.
+
+4. Run experiments the basic list scheduler and the LPT policy with small and large numbers of tasks and resources. Analyze how similarly or differently they behave in the different scenarios.
 
 5. Write the LPT algorithm with an additional restriction on the maximum number of tasks per resource (complete function *lpt\_with\_limits*). Check if it passes the test in the unitary tests' file.
 
-6. Compare how this new LPT algorithm performs compared with its original code for increasingly restrictive scenarios.
+6. Compare how this new LPT algorithm performs compared with its original code for increasingly restrictive scenarios. Show a situation where their makespans differ significantly for the same set of tasks and resources.
 
 **Additional challenge**
 
 7. Focus on the LPT algorithm. Try to create an adversary scenario that leads to a schedule that is (*4/3 - 1/3m*) from the optimal for *m=3* resources.
 
-8. Write the list scheduling algorithm for uniform resources (complete function *list\_scheduler\_for\_uniform\_resources*). Check if it passes the test in the unitary tests' file.
+8. Write the list scheduling algorithm for uniform resources (complete function *list\_scheduler\_for\_uniform\_resources*). Check if it passes the test in the unitary tests' file. Describe your solution and show how it performs for one scenario of your choice.
+
+
