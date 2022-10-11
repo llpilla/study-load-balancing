@@ -45,7 +45,7 @@ You can then create your virtual environment inside a folder of your choice near
     python -m venv my_venv_folder
 ```
 
-It may fail and require you to install `python3.8-venv` directly (using a system-specific command such as `apt`).
+It may fail and require you to install `python3.8-venv` or another version of this directly (using a system-specific command such as `apt`).
 To active it, run: 
 
 
