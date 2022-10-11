@@ -7,7 +7,7 @@ A set of activities using this repository is presented in the [activities sectio
 ## How To
 
 - The code in this repository is written using Python3 and a few of its modules.
-In order to check and install any missing modules, run `python3 setup.py`.
+In order to check and install any missing modules, run `python3 setup.py`. If you are using a Virtual Environement, check the section [here](#setup-inside-a-virtual-env).
 
 - To run a code example, try `python3 complete_example.py`.
 
@@ -33,6 +33,27 @@ $ ./test_support.py
 ```bash
 $ cd unitary_tests
 $ ./test_other_schedulers.py 
+```
+
+### Setup inside a virtual env
+
+To create a virtual environement you need the python module `virtualenv` with `pip install virtualenv`. Then create it inside a folder of your choice near your projet, but not in the git.
+
+```shell=bash
+    python -m venv my_venv_folder
+```
+
+Then activate with : 
+
+
+```shell=bash
+    source my_venv_folder/bin/activate
+```
+
+Then install packages inside the git folder with :
+
+```shell=bash
+    pip install -r requirements.txt
 ```
 
 ## Activities
