@@ -92,7 +92,7 @@ def evaluate_mapping(
         print(f'- Task loads: {task_loads}')
         print(f'- Task mapping: {mapping}')
         print(f'- Tasks per resource: {tasks_per_resource}')
-        print(f'- Resource loads: {resource_loads}')
+        print(f'- Resources\' load: {resource_loads}')
         print(f'* Metrics *')
         print(f'- Average resource load: {avg_load}')
         print(f'- Median resource load: {median_load}')
@@ -139,7 +139,7 @@ def plot_mapping(
     plt.bar(range(num_resources), resource_loads)
     plt.ylabel('Load (a.u.)')
     plt.xlabel('Resources')
-    plt.title('Resource loads')
+    plt.title('Resources\' load')
 
     # Saves the plot in a file if a filename is given
     if filename is not None:
